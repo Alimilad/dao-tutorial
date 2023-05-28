@@ -1,5 +1,5 @@
 export const CRYPTODEVS_DAO_CONTRACT_ADDRESS = "0x3b9f941feFcaeFD76d270fc98DbF1B66f4f36E2d";
-export const CRYPTODEVS_NFT_CONTRACT_ADDRESS = "0x87215930f6540C11649980A59BD4933Cd68d7220";
+export const CRYPTODEVS_NFT_CONTRACT_ADDRESS = "0xd1E29E75449C9fEC77ea9599F0f4B1C6fCa3CdB2";
 
 export const CRYPTODEVS_DAO_ABI = [
     {
@@ -192,25 +192,12 @@ export const CRYPTODEVS_NFT_ABI = [
     {
         "inputs": [
             {
-                "internalType": "uint256",
-                "name": "_tokenId",
-                "type": "uint256"
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
             }
         ],
-        "name": "available",
-        "outputs": [
-            {
-                "internalType": "bool",
-                "name": "",
-                "type": "bool"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "getPrice",
+        "name": "balanceOf",
         "outputs": [
             {
                 "internalType": "uint256",
@@ -223,31 +210,23 @@ export const CRYPTODEVS_NFT_ABI = [
     },
     {
         "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "_tokenId",
-                "type": "uint256"
-            }
-        ],
-        "name": "purchase",
-        "outputs": [],
-        "stateMutability": "payable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "name": "tokens",
-        "outputs": [
             {
                 "internalType": "address",
-                "name": "",
+                "name": "owner",
                 "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "index",
+                "type": "uint256"
+            }
+        ],
+        "name": "tokenOfOwnerByIndex",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
             }
         ],
         "stateMutability": "view",
